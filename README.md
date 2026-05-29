@@ -4,7 +4,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org)
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-12%2F12%20PASS-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-13%2F13%20PASS-brightgreen)]()
 
 > *Autonomous agents are becoming distributed systems. Distributed systems need observability.*
 
@@ -213,7 +213,7 @@ These are documented intentionally — they define the production roadmap:
 
 - **CLI: batch mode only.** `traceguard <file>` reads a completed trace. A `--watch` streaming mode (tail JSONL, emit alerts on new events) is on the roadmap.
 
-- **No tests for `cli.py` and `recorder.py`.** The detection logic (12/12 tests) is fully covered. CLI output formatting and file I/O are not yet under test.
+- **No tests for `cli.py` and `recorder.py`.** The detection logic (13/13 tests) is fully covered. CLI output formatting and file I/O are not yet under test.
 
 ---
 
