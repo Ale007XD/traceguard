@@ -32,11 +32,6 @@ _SEVERITY_STYLE = {
 }
 
 
-def _severity_text(severity: AnomalySeverity) -> Text:
-    color, icon = _SEVERITY_STYLE[severity]
-    return Text(f"{icon} {severity.value.upper()}", style=f"bold {color}")
-
-
 def _print_report(report: AnomalyReport) -> None:
     color, icon = _SEVERITY_STYLE[report.severity]
     title = Text()
