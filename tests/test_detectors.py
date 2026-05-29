@@ -135,3 +135,12 @@ def test_recursive_trace_has_critical():
     guard = TraceGuard()
     reports = guard.analyze(events)
     assert any(r.severity == AnomalySeverity.CRITICAL for r in reports)
+
+
+def test_silent_failure_trace_has_warn():
+    events = load_trace(Path("traces/silent_failure.jsonl"))
+    guard = TraceGuard()
+    reports = guard.analyze(events)
+    detectors = {r.detector for r in reports}
+    assert "SilentFailureDetector" in detectors
+    assert any(r.severity == AnomalySeverity.WARN for r in reports)
